@@ -1,0 +1,11 @@
+default: &default
+  url: redis://localhost:6379/0
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  url: redis://<production-redis-host>:6379/0
